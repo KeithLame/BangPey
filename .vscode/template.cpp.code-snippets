@@ -46,6 +46,7 @@
 
 		"description": "C++ Template"
 	},
+
 	"Input In Template": {
 		"scope": "c++, cpp",
 		"prefix": "inpt",
@@ -78,6 +79,7 @@
 
 		"description": "C++ Template"
 	},
+
 	"for auto": {
 		"scope": "c++, cpp",
 		"prefix": "autof",
@@ -86,5 +88,33 @@
 		],
 
 		"description": "C++ Template"
+	},
+
+	"minimum binary search": {
+		"scope": "c++, cpp",
+		"prefix": "minsearch",
+		"body": [
+			"int minBsearch(int low, int high, function<bool(int)> f) {",
+				"for (high ++; low < high; ) {",
+					"int mid = low + (high - low)/2;",
+					"if ( f(mid) ) high = mid;",
+					"else low = mid + 1;",
+				"}",
+				"return low;",
+			"}",
+		]
+	},
+
+	"maximum binary search": {
+		"scope": "c++, cpp",
+		"prefix": "maxsearch",
+		"body": [
+			"int lastTrue(int lo, int hi, function<bool(int)> f) {",
+				"--lo;",
+				"for (int dif = hi-lo; dif; dif /= 2)",
+					"while (lo+dif <= hi && f(lo+dif)) lo += dif;",
+				"return lo;",
+			"}",
+		]
 	}
 }

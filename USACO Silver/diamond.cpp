@@ -18,8 +18,21 @@ typedef pair<int, int> pi;
 #define ub upper_bound
 #define endl "\n"
 
-int main () {
-    
-    return 0;
+vector<int> cows;
+vector<pair<int, int> > a;
 
+int main () {
+    ifstream cin("diamond.in");
+    int N, K; cin >> N >> K;
+    a.resize(N);
+    cows.resize(N);
+    FOR(i, N) {
+        cin >> cows[i];
+    }
+    int currentSep = 0;
+    sort(cows.begin(). cows.end());
+    FOR(i, n) {
+        
+    }
+    return 0;
 }
